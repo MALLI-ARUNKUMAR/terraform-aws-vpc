@@ -19,7 +19,7 @@ locals{
         },
         var.gw_tags
     )
-    az_names = slice(data.aws_availability_zone.available.names, 0,2)
+    az_names = slice(data.aws_availability_zones.available.names, 0,2)
      #roboshop-dev-public-us-east-1a
     public_final_subnet_tags = merge(
         local.common_tags,
