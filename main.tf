@@ -104,7 +104,7 @@ resource "aws_route" "public" {
 resource "aws_eip" "nat" {
   domain = "vpc"
 
-  tags = marge(
+  tags = merge(
         local.common_tags,
         {
         Name = "${var.project}-${var.environment}-nat"
