@@ -15,7 +15,7 @@ locals{
     gw_final_tags = merge(
         local.common_tags,
         {
-         Name = "${var.project}-${var.environment}
+         Name = "${var.project}-${var.environment}"
         },
         var.gw_tags
     )
