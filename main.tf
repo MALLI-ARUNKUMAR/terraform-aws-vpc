@@ -101,3 +101,15 @@ resource "aws_route" "public" {
   gateway_id = aws_internet_gateway.gw.id
 }
 
+resource "aws_eip" "nat" {
+  domain = "vpc"
+
+  tags = marge(
+        local.common_tags,
+        {
+        Name = "${var.project}-${var.environment}-nat"
+        },
+        var.eip_final_tags
+    )
+
+}
