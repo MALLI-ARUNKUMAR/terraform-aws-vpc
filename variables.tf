@@ -63,3 +63,8 @@ variable "eip_final_tags"{
 variable "nat_gateway_tags"{
     default = {}
 }
+
+variable "is_peering_required"{
+    default = false
+    type = bool
+}
