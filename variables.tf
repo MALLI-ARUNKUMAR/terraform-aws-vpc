@@ -59,3 +59,7 @@ variable "database_route_table_tags"{
 variable "eip_final_tags"{
     default = {}
 }
+
+variable "nat_gateway_tags"{
+    default = {}
+}
