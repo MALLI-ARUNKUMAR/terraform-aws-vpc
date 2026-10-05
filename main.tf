@@ -122,7 +122,7 @@ resource "aws_nat_gateway" "this" {
 		 local.common_tags,
 		 
 		{
-			Name ="${var.project}-${var.environment}
+			Name ="${var.project}-${var.environment}"
 		},
 		var.nat_gateway_tags
 		)
